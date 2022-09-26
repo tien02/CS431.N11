@@ -6,4 +6,4 @@ The dataset was created by `sklearn.datasets.make_blobs` with 2 features and 2 c
 
 Result on test set: 
 
-![](img/logistic_regression.png)
+![](logistic_regression.png)
