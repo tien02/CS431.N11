@@ -103,7 +103,7 @@ if __name__ == '__main__':
     print("\n\t**Plot model on Test Set**")
     X_temp = np.linspace(int(X_test.min()), X_test.max(), X_test.shape[0])
     y_temp = model.predict(X_temp)
-    plt.plot(X_temp, y_temp)
+    plt.plot(X_temp, y_temp, 'g')
     plt.scatter(X_test, y_test)
     plt.show()
 
