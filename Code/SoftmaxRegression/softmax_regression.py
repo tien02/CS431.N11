@@ -96,11 +96,11 @@ if __name__ == '__main__':
     print("\n\t**Test Model on Test Set**")
     model.evaluate(X_test, y_test)
 
-    print("\n\t**Build Model**")
+    print("\n\t**Save Model**")
     model.save("checkpoint.h5")
 
-    print("\n\t**Save Model**")
-    model.load("./softmax_regression_pro.h5")
+    print("\n\t**Load Model**")
+    model.load("./softmax_checkpoint_pro.h5")
 
     print("\n\t**Get Model's parameters**")
     weights = model.get_trained_params()
