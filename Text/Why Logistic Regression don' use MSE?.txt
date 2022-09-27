@@ -1,0 +1,31 @@
+Q: Tại sao Mean Squared Error không được sử dụng trong Logistic Regression mà sử dụng Cross Entropy?
+
+A: 
+	* Trong bài toán classification, ta có y = (0, 1), y_pred = (0, 1)
+	
+
+	* Trong trường hợp kết quả dự đoán giống với kết quả thực tế:
+
+		y = 1, y_pred = 1:
+		
+	MSE = (1 - 1)2 = 0
+	BCE = -(0 + 0) = 0
+
+		Cả hai hàm Loss đều trả về kết quả bằng 0
+	
+	Trong trường hợp kết quả dự đoán khác với kết quả thực tế:
+
+		y = 0, y_pred ~ 0.99
+
+	MSE = (0 – 0.99)2 = 0.981
+	BCE = -(0 + -inf) = +inf
+
+		BCE trả về Loss cao hơn rất nhiều so với MSE. Loss cao dẫn đến gradient theo hàm Loss cũng cao, hỗ trợ phạt Loss mạnh hơn. Trong Khi MSE, giá trị của hàm Loss trong khoảng từ 0 đến 1, gradient theo Loss sẽ không đáng kể.
+
+		Không những thế, trong Gradient Descent, giá trị của parameter được cập nhật theo:
+			param = param - learning_rate * param_gradient
+
+		Ta có: learning_rate = (0, 1)
+
+ 		Theo các Iterations, vì phép nhân 2 giá trị trong khoảng (0, 1) trả về một giá trị nhỏ hơn, theo thời gian, MSE làm cho Gradient Descent cập nhật rất chậm. Tron khi đó BCE với Loss cao sẽ hỗ trợ Gradient Descent cập nhật nhanh hơn nhiều.
+		

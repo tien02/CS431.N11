@@ -1,0 +1,5 @@
+Q: Tại sao Mean Squared Error được sử dụng trong Linear Regression
+
+A: 
+	Mục tiêu cuối cùng của Linear Regression là parameter có thể tạo thành một đường thẳng fit với dữ liệu nhất có thể.
+	Trong quá trình huấn luyện mô hình, cần có metric để đánh giá được kết quả dự đoán so với thực tế - gọi là Loss. MSE đánh giá mức độ 'fit' của mô hình so với data. Trả về Loss của kết quả dự đoán so với thực tế, Gradient Desescent sử dụng nó để tính gradient của các pararameter so theo Loss, từ đó tối ưu Parameter theo Loss sao cho Loss nhỏ nhất.
