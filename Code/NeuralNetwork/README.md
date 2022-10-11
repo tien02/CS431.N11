@@ -1,4 +1,4 @@
-# Softmax Regression 
+# Neural Network
 
 Use Neural Network for classification task. 
 
