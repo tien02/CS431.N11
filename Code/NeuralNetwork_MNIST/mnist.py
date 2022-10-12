@@ -102,8 +102,6 @@ if __name__ == "__main__":
     plt.suptitle("Prediction on Test Set Visualization")
     for i in range(5):
         for j in range(5):
-            if i >= j:
-                continue
             x_idx = tf.experimental.numpy.random.randint(low=0,
                                             high=X_test.shape[0],
                                             size=1,dtype=tf.experimental.numpy.int64).numpy()[0]

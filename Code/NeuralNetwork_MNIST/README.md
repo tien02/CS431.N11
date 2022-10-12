@@ -8,4 +8,4 @@ Neural Network with 1 hidden layer, 768 nodes. The last layer use softmax activa
 
 Result on test set: 
 
-![](neural_network_mnist.png)
+![](mnist.png)
